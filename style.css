@@ -2,91 +2,107 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background: #ffffff;
-    color: #222222;
+    color: #252525;
     font-family:
         "Noto Sans KR",
         "Apple SD Gothic Neo",
         "Malgun Gothic",
         sans-serif;
     line-height: 1.7;
+    letter-spacing: -0.2px;
 }
 
 .container {
-    width: min(860px, 86%);
+    width: min(900px, 86%);
     margin: 0 auto;
 }
 
-/* 상단 프로필 */
+/* =========================
+   HEADER
+========================= */
 
 header {
     text-align: center;
-    padding: 90px 0 100px;
+    padding: 110px 0 115px;
 }
 
 .profile-image {
-    width: 130px;
-    height: 130px;
+    width: 138px;
+    height: 138px;
     object-fit: cover;
     border-radius: 50%;
     display: block;
-    margin: 0 auto 30px;
-    border: 1px solid #eeeeee;
+    margin: 0 auto 32px;
+    border: 1px solid #e6e9ed;
 }
 
 .name {
     margin: 0;
-    font-size: 52px;
-    font-weight: 700;
+    font-size: 48px;
+    font-weight: 600;
     letter-spacing: -3px;
 }
 
 .subtitle {
-    margin-top: 12px;
-    font-size: 17px;
-    color: #666666;
+    margin-top: 14px;
+    font-size: 16px;
+    color: #777d85;
 }
 
 .interests {
-    margin-top: 24px;
-    font-size: 14px;
-    color: #444444;
-    letter-spacing: 1px;
+    display: inline-block;
+    margin-top: 25px;
+    padding: 7px 16px;
+    border: 1px solid #dfe5eb;
+    border-radius: 30px;
+    font-size: 13px;
+    color: #657384;
+    letter-spacing: 0.3px;
 }
 
-/* 섹션 */
+/* =========================
+   SECTION
+========================= */
 
 section {
-    border-top: 1px solid #e9e9e9;
-    padding: 65px 0;
+    border-top: 1px solid #eceff2;
+    padding: 72px 0;
 }
 
 .section-title {
-    margin: 0 0 38px;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #888888;
+    margin: 0 0 42px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: #8a929b;
 }
 
-/* 프로필 */
+/* =========================
+   PROFILE
+========================= */
 
 .profile-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 70px;
 }
 
 .item {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .label {
-    margin-bottom: 6px;
-    font-size: 13px;
-    color: #999999;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #a0a6ad;
+    letter-spacing: 0.5px;
 }
 
 .value {
@@ -94,7 +110,9 @@ section {
     font-weight: 500;
 }
 
-/* 경력 */
+/* =========================
+   EXPERIENCE
+========================= */
 
 .experience-list {
     display: flex;
@@ -102,79 +120,125 @@ section {
 }
 
 .experience-item {
-    padding: 18px 0;
-    border-bottom: 1px solid #eeeeee;
-    font-size: 17px;
+    padding: 20px 4px;
+    border-bottom: 1px solid #eceff2;
+    font-size: 16px;
+    transition: padding-left 0.2s ease;
 }
 
 .experience-item:first-child {
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid #eceff2;
 }
 
-/* 자격증 */
+.experience-item:hover {
+    padding-left: 10px;
+}
+
+/* =========================
+   CERTIFICATE
+========================= */
 
 .certificate-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px 50px;
+    gap: 18px 60px;
 }
 
 .certificate {
-    font-size: 16px;
+    padding: 4px 0;
+    font-size: 15px;
+    color: #444a50;
 }
 
-/* 학업 목표 */
+/* =========================
+   GOAL
+========================= */
 
 .goal {
     max-width: 700px;
-    font-size: 17px;
-    color: #444444;
+    font-size: 16px;
+    color: #555c63;
+    line-height: 2;
 }
 
 .goal p {
-    margin: 0 0 24px;
+    margin: 0 0 26px;
 }
 
 .goal p:last-child {
     margin-bottom: 0;
 }
 
-/* 연락처 */
+/* =========================
+   CONTACT
+========================= */
 
 .contact {
     text-align: center;
-    padding-bottom: 100px;
+    padding: 80px 0 105px;
+}
+
+.contact .section-title {
+    margin-bottom: 25px;
 }
 
 .email {
-    font-size: 18px;
+    font-size: 16px;
+    color: #555c63;
 }
 
-/* 푸터 */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    border-top: 1px solid #e9e9e9;
+    border-top: 1px solid #eceff2;
     padding: 28px 0;
     text-align: center;
-    font-size: 12px;
-    color: #999999;
+    font-size: 11px;
+    color: #a2a7ad;
 }
 
-/* 모바일 */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 650px) {
 
+    .container {
+        width: 86%;
+    }
+
     header {
-        padding: 70px 0 75px;
+        padding: 75px 0 80px;
     }
 
     .profile-image {
-        width: 110px;
-        height: 110px;
+        width: 112px;
+        height: 112px;
+        margin-bottom: 26px;
     }
 
     .name {
-        font-size: 42px;
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .interests {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    section {
+        padding: 52px 0;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
     }
 
     .profile-grid {
@@ -182,16 +246,21 @@ footer {
         gap: 0;
     }
 
+    .item {
+        margin-bottom: 28px;
+    }
+
     .certificate-list {
         grid-template-columns: 1fr;
         gap: 12px;
     }
 
-    section {
-        padding: 50px 0;
+    .goal {
+        font-size: 15px;
+        line-height: 1.9;
     }
 
-    .container {
-        width: 84%;
+    .contact {
+        padding: 60px 0 80px;
     }
 }
