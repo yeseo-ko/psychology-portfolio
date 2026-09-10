@@ -9,7 +9,7 @@ html {
 body {
     margin: 0;
     background: #ffffff;
-    color: #252525;
+    color: #303840;
     font-family:
         "Noto Sans KR",
         "Apple SD Gothic Neo",
@@ -24,65 +24,77 @@ body {
     margin: 0 auto;
 }
 
+
 /* =========================
    HEADER
 ========================= */
 
 header {
+    position: relative;
     text-align: center;
-    padding: 110px 0 115px;
+    padding: 105px 0 110px;
+    background: linear-gradient(
+        180deg,
+        #f6f9fc 0%,
+        #ffffff 100%
+    );
 }
 
 .profile-image {
-    width: 138px;
-    height: 138px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
     border-radius: 50%;
     display: block;
-    margin: 0 auto 32px;
-    border: 1px solid #e6e9ed;
+    margin: 0 auto 30px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 8px 30px rgba(83, 103, 121, 0.12);
 }
 
 .name {
     margin: 0;
+    color: #303840;
     font-size: 48px;
     font-weight: 600;
     letter-spacing: -3px;
 }
 
 .subtitle {
-    margin-top: 14px;
+    margin-top: 13px;
     font-size: 16px;
-    color: #777d85;
+    color: #7a8793;
 }
 
 .interests {
     display: inline-block;
-    margin-top: 25px;
-    padding: 7px 16px;
-    border: 1px solid #dfe5eb;
+    margin-top: 24px;
+    padding: 7px 18px;
+    border: 1px solid #d7e2eb;
     border-radius: 30px;
+    background: rgba(255, 255, 255, 0.75);
+    color: #5d7285;
     font-size: 13px;
-    color: #657384;
     letter-spacing: 0.3px;
 }
+
 
 /* =========================
    SECTION
 ========================= */
 
 section {
-    border-top: 1px solid #eceff2;
-    padding: 72px 0;
+    padding: 75px 0;
+    border-top: 1px solid #e7edf2;
 }
 
 .section-title {
     margin: 0 0 42px;
+    color: #6e8191;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 2.5px;
-    color: #8a929b;
 }
+
 
 /* =========================
    PROFILE
@@ -91,24 +103,34 @@ section {
 .profile-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 70px;
+    gap: 25px;
 }
 
 .item {
-    margin-bottom: 20px;
+    padding: 25px 28px;
+    border: 1px solid #e5ebf0;
+    border-radius: 10px;
+    background: #f9fbfd;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(83, 103, 121, 0.08);
 }
 
 .label {
-    margin-bottom: 8px;
+    margin-bottom: 7px;
+    color: #9aa7b2;
     font-size: 12px;
-    color: #a0a6ad;
-    letter-spacing: 0.5px;
 }
 
 .value {
-    font-size: 17px;
+    color: #394650;
+    font-size: 16px;
     font-weight: 500;
 }
+
 
 /* =========================
    EXPERIENCE
@@ -120,19 +142,35 @@ section {
 }
 
 .experience-item {
-    padding: 20px 4px;
-    border-bottom: 1px solid #eceff2;
+    position: relative;
+    padding: 20px 12px 20px 22px;
+    border-bottom: 1px solid #e7edf2;
+    color: #3d4851;
     font-size: 16px;
-    transition: padding-left 0.2s ease;
+    transition: color 0.2s ease, padding-left 0.2s ease;
 }
 
 .experience-item:first-child {
-    border-top: 1px solid #eceff2;
+    border-top: 1px solid #e7edf2;
+}
+
+.experience-item::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #b7cadc;
+    transform: translateY(-50%);
 }
 
 .experience-item:hover {
-    padding-left: 10px;
+    padding-left: 30px;
+    color: #536b7d;
 }
+
 
 /* =========================
    CERTIFICATE
@@ -141,33 +179,47 @@ section {
 .certificate-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px 60px;
+    gap: 15px 20px;
 }
 
 .certificate {
-    padding: 4px 0;
+    padding: 17px 20px;
+    border: 1px solid #e6edf2;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #4b565e;
     font-size: 15px;
-    color: #444a50;
+    transition: background 0.2s ease, border-color 0.2s ease;
 }
+
+.certificate:hover {
+    background: #f6f9fc;
+    border-color: #cddce7;
+}
+
 
 /* =========================
    GOAL
 ========================= */
 
 .goal {
-    max-width: 700px;
+    max-width: 720px;
+    padding: 30px 32px;
+    border-left: 3px solid #b7cadc;
+    background: #f8fafc;
+    color: #59636c;
     font-size: 16px;
-    color: #555c63;
     line-height: 2;
 }
 
 .goal p {
-    margin: 0 0 26px;
+    margin: 0 0 24px;
 }
 
 .goal p:last-child {
     margin-bottom: 0;
 }
+
 
 /* =========================
    CONTACT
@@ -176,28 +228,37 @@ section {
 .contact {
     text-align: center;
     padding: 80px 0 105px;
+    background: #f7f9fb;
 }
 
 .contact .section-title {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 
 .email {
-    font-size: 16px;
-    color: #555c63;
+    display: inline-block;
+    padding: 10px 22px;
+    border: 1px solid #dce5ec;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #536b7d;
+    font-size: 15px;
 }
+
 
 /* =========================
    FOOTER
 ========================= */
 
 footer {
-    border-top: 1px solid #eceff2;
     padding: 28px 0;
+    border-top: 1px solid #e3e9ee;
+    background: #ffffff;
     text-align: center;
+    color: #a1abb3;
     font-size: 11px;
-    color: #a2a7ad;
 }
+
 
 /* =========================
    MOBILE
@@ -216,7 +277,6 @@ footer {
     .profile-image {
         width: 112px;
         height: 112px;
-        margin-bottom: 26px;
     }
 
     .name {
@@ -229,12 +289,11 @@ footer {
     }
 
     .interests {
-        margin-top: 20px;
         font-size: 12px;
     }
 
     section {
-        padding: 52px 0;
+        padding: 55px 0;
     }
 
     .section-title {
@@ -243,19 +302,21 @@ footer {
 
     .profile-grid {
         grid-template-columns: 1fr;
-        gap: 0;
+        gap: 14px;
     }
 
     .item {
-        margin-bottom: 28px;
+        padding: 22px;
     }
 
     .certificate-list {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 10px;
     }
 
     .goal {
+        padding: 24px;
+        border-left-width: 3px;
         font-size: 15px;
         line-height: 1.9;
     }
