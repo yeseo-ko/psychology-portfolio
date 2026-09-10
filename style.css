@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #ffffff;
+    color: #222222;
+    font-family:
+        "Noto Sans KR",
+        "Apple SD Gothic Neo",
+        "Malgun Gothic",
+        sans-serif;
+    line-height: 1.7;
+}
+
+.container {
+    width: min(860px, 86%);
+    margin: 0 auto;
+}
+
+/* 상단 프로필 */
+
+header {
+    text-align: center;
+    padding: 90px 0 100px;
+}
+
+.profile-image {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+    border: 1px solid #eeeeee;
+}
+
+.name {
+    margin: 0;
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: -3px;
+}
+
+.subtitle {
+    margin-top: 12px;
+    font-size: 17px;
+    color: #666666;
+}
+
+.interests {
+    margin-top: 24px;
+    font-size: 14px;
+    color: #444444;
+    letter-spacing: 1px;
+}
+
+/* 섹션 */
+
+section {
+    border-top: 1px solid #e9e9e9;
+    padding: 65px 0;
+}
+
+.section-title {
+    margin: 0 0 38px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #888888;
+}
+
+/* 프로필 */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.item {
+    margin-bottom: 25px;
+}
+
+.label {
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #999999;
+}
+
+.value {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* 경력 */
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-item {
+    padding: 18px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 17px;
+}
+
+.experience-item:first-child {
+    border-top: 1px solid #eeeeee;
+}
+
+/* 자격증 */
+
+.certificate-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 50px;
+}
+
+.certificate {
+    font-size: 16px;
+}
+
+/* 학업 목표 */
+
+.goal {
+    max-width: 700px;
+    font-size: 17px;
+    color: #444444;
+}
+
+.goal p {
+    margin: 0 0 24px;
+}
+
+.goal p:last-child {
+    margin-bottom: 0;
+}
+
+/* 연락처 */
+
+.contact {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.email {
+    font-size: 18px;
+}
+
+/* 푸터 */
+
+footer {
+    border-top: 1px solid #e9e9e9;
+    padding: 28px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #999999;
+}
+
+/* 모바일 */
+
+@media (max-width: 650px) {
+
+    header {
+        padding: 70px 0 75px;
+    }
+
+    .profile-image {
+        width: 110px;
+        height: 110px;
+    }
+
+    .name {
+        font-size: 42px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .certificate-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .container {
+        width: 84%;
+    }
+}
