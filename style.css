@@ -1,3 +1,7 @@
+/* =========================
+   기본 설정
+========================= */
+
 * {
     box-sizing: border-box;
 }
@@ -9,14 +13,14 @@ html {
 body {
     margin: 0;
     background: #ffffff;
-    color: #303840;
+    color: #24384d;
     font-family:
         "Noto Sans KR",
         "Apple SD Gothic Neo",
         "Malgun Gothic",
         sans-serif;
     line-height: 1.7;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.3px;
 }
 
 .container {
@@ -26,114 +30,169 @@ body {
 
 
 /* =========================
-   HEADER
+   상단 프로필
 ========================= */
 
 header {
     position: relative;
-    text-align: center;
-    padding: 105px 0 110px;
-    background: linear-gradient(
-        180deg,
-        #f6f9fc 0%,
-        #ffffff 100%
-    );
+    padding: 100px 0 105px;
+    background:
+        linear-gradient(
+            135deg,
+            #edf6fc 0%,
+            #f7fbfe 45%,
+            #ffffff 100%
+        );
+    overflow: hidden;
+}
+
+/* 배경에 아주 은은한 원형 포인트 */
+header::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: -120px;
+    top: -120px;
+    border-radius: 50%;
+    background: rgba(183, 211, 232, 0.22);
 }
 
 .profile-image {
-    width: 140px;
-    height: 140px;
+    position: relative;
+    z-index: 1;
+
+    width: 145px;
+    height: 145px;
+
     object-fit: cover;
     border-radius: 50%;
+
     display: block;
     margin: 0 auto 30px;
-    border: 5px solid #ffffff;
-    box-shadow: 0 8px 30px rgba(83, 103, 121, 0.12);
+
+    border: 6px solid #ffffff;
+
+    box-shadow:
+        0 12px 35px rgba(82, 125, 158, 0.18);
 }
 
 .name {
+    position: relative;
+    z-index: 1;
+
     margin: 0;
-    color: #303840;
-    font-size: 48px;
+
+    color: #203b55;
+    font-size: 50px;
     font-weight: 600;
-    letter-spacing: -3px;
+    letter-spacing: -4px;
 }
 
 .subtitle {
+    position: relative;
+    z-index: 1;
+
     margin-top: 13px;
+
+    color: #668098;
     font-size: 16px;
-    color: #7a8793;
 }
 
 .interests {
+    position: relative;
+    z-index: 1;
+
     display: inline-block;
-    margin-top: 24px;
-    padding: 7px 18px;
-    border: 1px solid #d7e2eb;
+
+    margin-top: 23px;
+    padding: 7px 20px;
+
+    border: 1px solid #bdd4e6;
     border-radius: 30px;
-    background: rgba(255, 255, 255, 0.75);
-    color: #5d7285;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    color: #4e7391;
     font-size: 13px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
+
+    box-shadow: 0 4px 15px rgba(83, 125, 157, 0.07);
 }
 
 
 /* =========================
-   SECTION
+   공통 섹션
 ========================= */
 
 section {
     padding: 75px 0;
-    border-top: 1px solid #e7edf2;
+    border-top: 1px solid #e2edf4;
 }
 
 .section-title {
-    margin: 0 0 42px;
-    color: #6e8191;
+    margin: 0 0 40px;
+
+    color: #50718d;
+
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 2.5px;
+    letter-spacing: 3px;
 }
 
 
 /* =========================
-   PROFILE
+   프로필
 ========================= */
 
 .profile-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 20px;
 }
 
 .item {
-    padding: 25px 28px;
-    border: 1px solid #e5ebf0;
+    padding: 25px 27px;
+
+    border: 1px solid #dce9f2;
     border-radius: 10px;
-    background: #f9fbfd;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    background: #f7fbfe;
+
+    box-shadow:
+        0 5px 20px rgba(76, 119, 151, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(83, 103, 121, 0.08);
+    transform: translateY(-4px);
+
+    border-color: #b8d2e5;
+
+    box-shadow:
+        0 12px 28px rgba(76, 119, 151, 0.10);
 }
 
 .label {
     margin-bottom: 7px;
-    color: #9aa7b2;
+
+    color: #8ba2b5;
     font-size: 12px;
 }
 
 .value {
-    color: #394650;
-    font-size: 16px;
+    color: #304960;
+    font-size: 17px;
     font-weight: 500;
 }
 
 
 /* =========================
-   EXPERIENCE
+   경력
 ========================= */
 
 .experience-list {
@@ -143,71 +202,110 @@ section {
 
 .experience-item {
     position: relative;
-    padding: 20px 12px 20px 22px;
-    border-bottom: 1px solid #e7edf2;
-    color: #3d4851;
+
+    padding: 20px 15px 20px 30px;
+
+    border-bottom: 1px solid #e1ebf2;
+
+    color: #3c5368;
     font-size: 16px;
-    transition: color 0.2s ease, padding-left 0.2s ease;
+
+    transition:
+        color 0.2s ease,
+        padding-left 0.2s ease;
 }
 
 .experience-item:first-child {
-    border-top: 1px solid #e7edf2;
+    border-top: 1px solid #e1ebf2;
 }
 
+/* 타임라인 점 */
 .experience-item::before {
     content: "";
+
     position: absolute;
-    left: 2px;
+    left: 5px;
     top: 50%;
-    width: 5px;
-    height: 5px;
+
+    width: 7px;
+    height: 7px;
+
     border-radius: 50%;
-    background: #b7cadc;
+
+    background: #8db4d2;
+
     transform: translateY(-50%);
 }
 
 .experience-item:hover {
-    padding-left: 30px;
-    color: #536b7d;
+    padding-left: 38px;
+    color: #315d7d;
 }
 
 
 /* =========================
-   CERTIFICATE
+   자격 및 자격증
 ========================= */
 
 .certificate-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     gap: 15px 20px;
 }
 
 .certificate {
-    padding: 17px 20px;
-    border: 1px solid #e6edf2;
-    border-radius: 8px;
+    padding: 19px 21px;
+
+    border: 1px solid #dce9f2;
+    border-radius: 9px;
+
     background: #ffffff;
-    color: #4b565e;
+
+    color: #40566a;
     font-size: 15px;
-    transition: background 0.2s ease, border-color 0.2s ease;
+
+    box-shadow:
+        0 4px 15px rgba(76, 119, 151, 0.04);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .certificate:hover {
-    background: #f6f9fc;
-    border-color: #cddce7;
+    background: #f4f9fd;
+
+    border-color: #b8d2e5;
+
+    transform: translateY(-3px);
 }
 
 
 /* =========================
-   GOAL
+   학업 목표
 ========================= */
 
 .goal {
-    max-width: 720px;
+    max-width: 760px;
+
     padding: 30px 32px;
-    border-left: 3px solid #b7cadc;
-    background: #f8fafc;
-    color: #59636c;
+
+    border: 1px solid #d8e7f1;
+    border-left: 4px solid #91b9d6;
+
+    border-radius: 0 10px 10px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1f8fd,
+            #f8fbfd
+        );
+
+    color: #52697b;
+
     font-size: 16px;
     line-height: 2;
 }
@@ -222,46 +320,61 @@ section {
 
 
 /* =========================
-   CONTACT
+   연락처
 ========================= */
 
 .contact {
-    text-align: center;
     padding: 80px 0 105px;
-    background: #f7f9fb;
+
+    background: #f5f9fc;
+
+    text-align: center;
 }
 
 .contact .section-title {
-    margin-bottom: 24px;
+    margin-bottom: 25px;
 }
 
 .email {
     display: inline-block;
-    padding: 10px 22px;
-    border: 1px solid #dce5ec;
+
+    padding: 10px 24px;
+
+    border: 1px solid #cbdde9;
     border-radius: 30px;
+
     background: #ffffff;
-    color: #536b7d;
+
+    color: #52718b;
+
     font-size: 15px;
+
+    box-shadow:
+        0 5px 18px rgba(76, 119, 151, 0.06);
 }
 
 
 /* =========================
-   FOOTER
+   푸터
 ========================= */
 
 footer {
     padding: 28px 0;
-    border-top: 1px solid #e3e9ee;
-    background: #ffffff;
+
+    border-top: 1px solid #dce8ef;
+
+    background: #789bb7;
+
+    color: rgba(255, 255, 255, 0.85);
+
     text-align: center;
-    color: #a1abb3;
+
     font-size: 11px;
 }
 
 
 /* =========================
-   MOBILE
+   모바일
 ========================= */
 
 @media (max-width: 650px) {
@@ -274,14 +387,22 @@ footer {
         padding: 75px 0 80px;
     }
 
+    header::after {
+        width: 200px;
+        height: 200px;
+        right: -100px;
+        top: -80px;
+    }
+
     .profile-image {
-        width: 112px;
-        height: 112px;
+        width: 115px;
+        height: 115px;
+        border-width: 5px;
     }
 
     .name {
-        font-size: 40px;
-        letter-spacing: -2px;
+        font-size: 41px;
+        letter-spacing: -3px;
     }
 
     .subtitle {
@@ -290,6 +411,7 @@ footer {
 
     .interests {
         font-size: 12px;
+        padding: 6px 16px;
     }
 
     section {
@@ -316,7 +438,6 @@ footer {
 
     .goal {
         padding: 24px;
-        border-left-width: 3px;
         font-size: 15px;
         line-height: 1.9;
     }
